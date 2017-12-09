@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- Mybatis 的一些全局配置  -->
+    <settings>
+        <!--  开启驼峰命名转换：Table(create_time)->entity(createTime)  -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <!--  配置指定路劲的实体类，给这些类 取别名  -->
+    <typeAliases>
+        <!--  单个类取别名  -->
+        <!--<typeAlias type="com.lbyx.entity.User" alias="User"/>-->
+
+        <!--  多个类取别名，指定包的路径即可，别名首字母不区分大小写！！！  -->
+        <package name="com.entity"/>
+
+    </typeAliases>
+
+
+</configuration>
